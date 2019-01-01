@@ -1,1 +1,3 @@
-name: my name is 何一乐
+logging:
+  config: classpath:logback-spring.xml
+  level.org.springframework.boot.autoconfigure: error

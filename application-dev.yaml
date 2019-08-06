@@ -1,16 +1,16 @@
-#·şÎñÆ÷ÅäÖÃ
+#æœåŠ¡å™¨é…ç½®
 server:
   undertow:
-    # ÉèÖÃIOÏß³ÌÊı, ËüÖ÷ÒªÖ´ĞĞ·Ç×èÈûµÄÈÎÎñ,ËüÃÇ»á¸ºÔğ¶à¸öÁ¬½Ó, Ä¬ÈÏÉèÖÃÃ¿¸öCPUºËĞÄÒ»¸öÏß³Ì
+    # è®¾ç½®IOçº¿ç¨‹æ•°, å®ƒä¸»è¦æ‰§è¡Œéé˜»å¡çš„ä»»åŠ¡,å®ƒä»¬ä¼šè´Ÿè´£å¤šä¸ªè¿æ¥, é»˜è®¤è®¾ç½®æ¯ä¸ªCPUæ ¸å¿ƒä¸€ä¸ªçº¿ç¨‹
     io-threads: 4
-    # ×èÈûÈÎÎñÏß³Ì³Ø, µ±Ö´ĞĞÀàËÆservletÇëÇó×èÈû²Ù×÷, undertow»á´ÓÕâ¸öÏß³Ì³ØÖĞÈ¡µÃÏß³Ì,ËüµÄÖµÉèÖÃÈ¡¾öÓÚÏµÍ³µÄ¸ºÔØ
+    # é˜»å¡ä»»åŠ¡çº¿ç¨‹æ± , å½“æ‰§è¡Œç±»ä¼¼servletè¯·æ±‚é˜»å¡æ“ä½œ, undertowä¼šä»è¿™ä¸ªçº¿ç¨‹æ± ä¸­å–å¾—çº¿ç¨‹,å®ƒçš„å€¼è®¾ç½®å–å†³äºç³»ç»Ÿçš„è´Ÿè½½
     worker-threads: 20
-    # ÒÔÏÂµÄÅäÖÃ»áÓ°Ïìbuffer,ÕâĞ©buffer»áÓÃÓÚ·şÎñÆ÷Á¬½ÓµÄIO²Ù×÷,ÓĞµãÀàËÆnettyµÄ³Ø»¯ÄÚ´æ¹ÜÀí
+    # ä»¥ä¸‹çš„é…ç½®ä¼šå½±å“buffer,è¿™äº›bufferä¼šç”¨äºæœåŠ¡å™¨è¿æ¥çš„IOæ“ä½œ,æœ‰ç‚¹ç±»ä¼¼nettyçš„æ± åŒ–å†…å­˜ç®¡ç†
     buffer-size: 1024
-    # ÊÇ·ñ·ÖÅäµÄÖ±½ÓÄÚ´æ
+    # æ˜¯å¦åˆ†é…çš„ç›´æ¥å†…å­˜
     direct-buffers: true
 
-#springÅäÖÃ
+#springé…ç½®
 spring:
   devtools:
     restart:
@@ -18,18 +18,18 @@ spring:
     livereload:
       port: 23333
 
-#feignÅäÖÃ
+#feigné…ç½®
 feign:
   hystrix:
     enabled: true
-  #sentinel:
+    #sentinel:
     #enabled: true
   okhttp:
     enabled: true
   httpclient:
     enabled: false
 
-#hystrixÅäÖÃ
+#hystrixé…ç½®
 hystrix:
   threadpool:
     default:
@@ -43,20 +43,20 @@ hystrix:
           thread:
             timeoutInMilliseconds: 5000
 
-#ribbonÅäÖÃ
+#ribboné…ç½®
 ribbon:
-  #¶Ôµ±Ç°ÊµÀıµÄÖØÊÔ´ÎÊı
+  #å¯¹å½“å‰å®ä¾‹çš„é‡è¯•æ¬¡æ•°
   MaxAutoRetries: 1
-  #ÇĞ»»ÊµÀıµÄÖØÊÔ´ÎÊı
+  #åˆ‡æ¢å®ä¾‹çš„é‡è¯•æ¬¡æ•°
   MaxAutoRetriesNextServer: 2
-  #ÇëÇó´¦ÀíµÄ³¬Ê±Ê±¼ä
+  #è¯·æ±‚å¤„ç†çš„è¶…æ—¶æ—¶é—´
   ReadTimeout: 60000
-  #ÇëÇóÁ¬½ÓµÄ³¬Ê±Ê±¼ä
+  #è¯·æ±‚è¿æ¥çš„è¶…æ—¶æ—¶é—´
   ConnectTimeout: 60000
-  #¶ÔËùÓĞ²Ù×÷ÇëÇó¶¼½øĞĞÖØÊÔ
+  #å¯¹æ‰€æœ‰æ“ä½œè¯·æ±‚éƒ½è¿›è¡Œé‡è¯•
   OkToRetryOnAllOperations: true
 
-#¶ÔÍâ±©Â¶¶Ë¿Ú
+#å¯¹å¤–æš´éœ²ç«¯å£
 management:
   endpoints:
     web:
@@ -66,7 +66,7 @@ management:
     health:
       show-details: always
 
-#bladeÅäÖÃ
+#bladeé…ç½®
 blade:
   xss:
     url:
